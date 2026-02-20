@@ -7,7 +7,7 @@
 
 ## Proje Hakkında
 
-![Ürün Tanıtım Görseli](Product.png)
+![Ürün Tanıtım Görseli](product.png)
 
 **Proje Tanımı:** 
 ***RandevUP***, bireylerin randevu oluşturmasını kolaylaştırırken işletmelerin de kendi hizmetlerini dijital ortama taşımasını sağlayan modern bir randevu yönetim platformudur.
