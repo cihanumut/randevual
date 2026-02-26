@@ -1,15 +1,46 @@
-1. **Üye Olma**
-   - **API Metodu:** `POST /auth/register`
-   - **Açıklama:** Kullanıcıların yeni hesaplar oluşturarak sisteme kayıt olmasını sağlar. Kişisel bilgilerin toplanmasını ve hesap oluşturma işlemlerini içerir. Kullanıcılar email adresi ve şifre belirleyerek hesap oluşturur.
+## 💬 Comment İşlemleri
 
-2. **Profil Görüntüleme**
-   - **API Metodu:** `GET /users/{userId}`
-   - **Açıklama:** Kullanıcının profil bilgilerini görüntülemesini sağlar. Kullanıcı adı, email, telefon gibi kişisel bilgiler ve hesap durumu gösterilir. Kullanıcılar kendi profil bilgilerini görüntüleyebilir veya yöneticiler diğer kullanıcıların bilgilerini inceleyebilir. Güvenlik için giriş yapmış olmak gerekir.
+1. **Comment Ekleme**  (Beyza Nur Kaya)
+    - **API Metodu:** `POST /comments`  
+    - **Açıklama:** Müşteri, aldığı hizmet için yorum yapabilir.
 
-3. **Profil Güncelleme**
-   - **API Metodu:** `PUT /users/{userId}`
-   - **Açıklama:** Kullanıcının profil bilgilerini güncellemesini sağlar. Kullanıcılar ad, soyad, email, telefon gibi kişisel bilgilerini değiştirebilir. Güvenlik için giriş yapmış olmak gerekir ve kullanıcılar yalnızca kendi bilgilerini güncelleyebilir.
+2. **Comment Listeleme**  (Beyza Nur Kaya)
+    - **API Metodu:** `GET /comments?businessId={businessId}`  
+    - **Açıklama:** Belirli bir işletmeye ait yorumları listeler.
 
-4. **Hesap Silme**
-   - **API Metodu:** `DELETE /users/{userId}`
-   - **Açıklama:** Kullanıcının hesabını sistemden kalıcı olarak silmesini sağlar. Kullanıcı hesabını kapatmak istediğinde veya yönetici tarafından hesap kapatılması gerektiğinde kullanılır. Bu işlem geri alınamaz ve kullanıcının tüm verileri silinir. Güvenlik için giriş yapmış olmak gerekir.
+3. **Comment Güncelleme**  (Beyza Nur Kaya)
+    - **API Metodu:** `PUT /comments/{commentId}`  
+    - **Açıklama:** Müşterinin yaptığı yorumu günceller.
+
+4. **Comment Silme**  (Beyza Nur Kaya)
+    - **API Metodu:** `DELETE /comments/{commentId}`  
+    - **Açıklama:** Yorumu siler.
+
+---
+
+## 🏢 İşletme İşlemleri
+
+5. **İşletme Üye Olma** (Beyza Nur Kaya)  
+    - **API Metodu:** `POST /businesses/register`  
+    - **Açıklama:** Yeni işletme hesabı oluşturur.
+
+6. **İşletme Giriş**  (Beyza Nur Kaya)
+    - **API Metodu:** `POST /businesses/login`  
+    - **Açıklama:** İşletmenin sisteme giriş yapmasını sağlar.
+
+7. **İşletme Oluşturma**  (Beyza Nur Kaya)
+    - **API Metodu:** `POST /businesses`  
+    - **Açıklama:** Sisteme yeni bir işletme ekler.
+
+8. **İşletme Güncelleme**  (Beyza Nur Kaya)
+    - **API Metodu:** `PUT /businesses/{businessId}`  
+    - **Açıklama:** İşletme bilgilerini günceller.
+
+9. **İşletme Silme**  (Beyza Nur Kaya)
+    - **API Metodu:** `DELETE /businesses/{businessId}`  
+    - **Açıklama:** İşletmeyi sistemden kaldırır.
+
+10. **İşletmeler Listeleme** (Beyza Nur Kaya)
+    - **API Metodu:** `GET /businesses?ownerId={ownerId}`  
+    - **Açıklama:** Belirli bir kullanıcıya ait tüm işletmeleri listeler.  
+    - **Not:** Kendi işletmelerini listelemek için `/businesses/me` kullanılabilir.
